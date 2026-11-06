@@ -1,0 +1,180 @@
+/* ========================================================
+   EMMANUEL MUEBLES — PAQUETE 3: IDENTIDAD EMBLEMA INDUSTRIAL (BRANDING 3)
+   Especificaciones Oficiales: Manrope, Carbón (#242622 / #10120F), Nogal (#75553F / #C49A7A), 
+   Verde Taller (#566B62), Cal (#F5F3EE), Acero (#70797E), Blanco (#FFFFFF)
+   Legibilidad Superior Manrope, Alto Contraste WCAG AAA & Rigor Industrial
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-carbon-dark: #10120F;
+  --color-carbon-base: #141612;
+  --color-carbon: #242622;
+  --color-carbon-surface: #191C17;
+  --color-carbon-card: #1F231D;
+  --color-carbon-border: rgba(255, 255, 255, 0.14);
+  --color-nogal: #75553F;
+  --color-nogal-light: #9B7357;
+  --color-nogal-warm: #C49A7A;
+  --color-nogal-border: rgba(196, 154, 122, 0.4);
+  --color-verde-taller: #566B62;
+  --color-verde-taller-light: #708A7F;
+  --color-cal: #F5F3EE;
+  --color-acero: #70797E;
+  --color-acero-light: #9DA6AB;
+  --color-blanco: #FFFFFF;
+  --color-texto-h: #FFFFFF;
+  --color-texto-body: #E5E7EB;
+  --color-texto-muted: #D1D5DB;
+  --font-brand: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+*, *::before, *::after, html, body, button, input, select, textarea, .font-mono, .font-sans, .font-brand {
+  box-sizing: border-box;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-brand);
+  background-color: var(--color-carbon-dark);
+  color: var(--color-texto-body);
+  color-scheme: dark;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-carbon-dark);
+  color: var(--color-texto-body);
+  font-family: var(--font-brand);
+  line-height: 1.65;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(86, 107, 98, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 90% 30%, rgba(117, 85, 63, 0.12) 0%, transparent 50%);
+}
+
+.font-brand { font-family: var(--font-brand); }
+.font-mono { font-family: var(--font-brand); }
+
+/* JERARQUÍA TIPOGRÁFICA DE ALTO CONTRASTE */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-texto-h);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+p {
+  color: var(--color-texto-body);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* TARJETAS LIMPIAS CARBÓN INDUSTRIAL */
+.brand-card {
+  background: var(--color-carbon-surface);
+  border: 1px solid var(--color-carbon-border);
+  border-radius: 1rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+.brand-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-nogal-border);
+  background: var(--color-carbon-card);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.65);
+}
+
+/* TARJETAS DE PROYECTO */
+.project-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* PESTAÑAS DE FILTRO */
+.filter-tab {
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  font-size: 13px;
+  font-family: var(--font-brand);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #D1D5DB;
+  background-color: var(--color-carbon-surface);
+  border: 1px solid var(--color-carbon-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+.filter-tab:hover {
+  color: #FFFFFF;
+  border-color: var(--color-nogal);
+  background-color: var(--color-carbon-card);
+}
+.filter-tab.active {
+  background-color: var(--color-nogal);
+  color: #FFFFFF;
+  border-color: var(--color-nogal);
+  box-shadow: 0 4px 15px rgba(117, 85, 63, 0.4);
+}
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 9999px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+.whatsapp-float-btn:hover {
+  background-color: #1EBE5D;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* MICROANIMACIONES Y AGENTE */
+@keyframes agentPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+.agent-pulse {
+  animation: agentPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* CAJÓN CHAT */
+.chat-drawer {
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chat-drawer.open {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
